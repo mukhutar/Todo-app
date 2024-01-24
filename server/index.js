@@ -4,7 +4,6 @@ const cors = require('cors')
 const pool = require('./database')
 
 // middleware
-
 app.use(cors());
 app.use(express.json());
 
@@ -16,7 +15,7 @@ app.post('/todos', async (req, res)=>{
     try {
        const {description} = req.body;
        const NewTodo = await pool.query('INSERT INTO todo (description) VALUES($1) RETURNING *',
-       [description]);
+       [ ]);
 
         res.json(NewTodo.row);    
         

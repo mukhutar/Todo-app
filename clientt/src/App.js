@@ -7,7 +7,7 @@ import ListTodos from './component/ListTodos';
 
 function App() {
   return (
-    <Fragment>
+    <Fragment className= "bg-black">
       <div className='container'>
          <InputTodo/>
           <ListTodos/>
