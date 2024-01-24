@@ -1,20 +1,17 @@
 import React, { Fragment } from 'react';
-import './App.css';
-import InputTodo from './component/InputTodo';
-import ListTodos from './component/ListTodos';
-
+import {Routes , Route} from 'react-router-dom'
+import Todo from './pages/todo';
+import User from './pages/user';
+import Sign from './pages/sign';
 
 
 function App() {
   return (
-    <Fragment className= "bg-black">
-      <div className='container'>
-         <InputTodo/>
-          <ListTodos/>
-        
-      </div>
-     
-    </Fragment>
+    <Routes>
+      <Route path='/' element = {<User/>}/>
+      <Route path='/signUp' element = {<Sign/>}/>
+      <Route path='/todo' element = {<Todo/>}/>
+    </Routes>
   );
 }
 

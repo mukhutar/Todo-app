@@ -23,7 +23,7 @@ function ListTodos() {
 
     const getTodos = async() => {
         try {
-            const responseI = await fetch("http://localhost:4000")
+            const responseI = await fetch("http://localhost:4000/AllTodos")
             const JsonData =  await responseI.json()
            
             setTodos(JsonData)
