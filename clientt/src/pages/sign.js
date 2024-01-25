@@ -37,11 +37,19 @@ function User() {
   };
 
   return (
-    <div className="container">
+    <div className="containerr">
       <div className="color"></div>
 
       <form onSubmit={RecordUser}>
         <h1>User Sign-up Form</h1>
+
+        {successMessage && (
+          <h4 className="message">{successMessage}</h4>
+        )}
+
+        {errorMessage && (
+          <h4 className="Errmessage">{errorMessage}</h4>
+        )}
 
         <label>User Name:</label> <br />
         <input
@@ -61,16 +69,13 @@ function User() {
         <button>Sign up</button> <br />
         <Link to="/">Have an account? Login Here</Link>
 
-        {successMessage && (
-          <div className="success-message">{successMessage}</div>
-        )}
-
-        {errorMessage && (
-          <div className="error-message">{errorMessage}</div>
-        )}
+       
       </form>
     </div>
   );
 }
 
 export default User;
+
+
+

@@ -4,7 +4,7 @@ html,body{
     background-color: rgb(255, 255, 255);
 }
 
-.container{
+.containerr{
     margin: auto;
     display: flex;
     align-items: center;
@@ -57,3 +57,10 @@ button{
 
 }
 
+.message{
+    color: green;
+}
+
+.Errmessage{
+    color: red;
+}

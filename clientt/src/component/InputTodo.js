@@ -12,7 +12,7 @@ function InputTodo() {
                 headers: {'Content-Type': 'application/json'},
                 body:JSON.stringify(body)
             })
-          window.location = '/'
+          window.location = '/todo'
             
         } catch (err) {
             console.error(err.message);
